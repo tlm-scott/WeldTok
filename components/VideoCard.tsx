@@ -44,6 +44,7 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
             loop
             src={video.asset.url}
             playsInline
+            muted
             controls
             className='w-[250px] md:w-full rounded-xl cursor-pointer'
           ></video>
@@ -109,6 +110,7 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
           <Link href={`/detail/${_id}`}>
             <video
               loop
+              muted
               ref={videoRef}
               src={video.asset.url}
               playsInline
