@@ -44,6 +44,7 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
             loop
             src={video.asset.url}
             playsInline
+            controls
             className='w-[250px] md:w-full rounded-xl cursor-pointer'
           ></video>
         </Link>
@@ -111,6 +112,7 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
               ref={videoRef}
               src={video.asset.url}
               playsInline
+              controls
               className='lg:w-[600px] h-[300px] md:h-[400px] lg:h-[528px] w-[200px] rounded-2xl cursor-pointer bg-gray-100'
             ></video>
           </Link>
