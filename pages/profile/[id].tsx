@@ -84,11 +84,11 @@ const Profile = ({ data }: IProps) => {
 };
 
 export const getServerSideProps = async ({
-  params: { userId },
+  params: { id },
 }: {
-  params: { userId: string };
+  params: { id: string };
 }) => {
-  const res = await axios.get(`${BASE_URL}/api/profile/${userId}`);
+  const res = await axios.get(`${BASE_URL}/api/profile/${id}`);
 
   return {
     props: { data: res.data },
