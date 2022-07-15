@@ -43,10 +43,7 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
           <video
             loop
             src={video.asset.url}
-            playsInline
-            muted
-            controls
-            className='w-[250px] md:w-full rounded-xl cursor-pointer'
+            className='w-[250px] md:w-full rounded-xl cursor-pointer bg-black'
           ></video>
         </Link>
             <div className='flex gap-2 -mt-8 items-center ml-4'>
@@ -110,12 +107,9 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
           <Link href={`/detail/${_id}`}>
             <video
               loop
-              muted
               ref={videoRef}
               src={video.asset.url}
-              playsInline
-              controls
-              className='lg:w-[600px] h-[300px] md:h-[400px] lg:h-[528px] w-[200px] rounded-2xl cursor-pointer bg-gray-100'
+              className='lg:w-[600px] h-[300px] md:h-[400px] lg:h-[528px] w-[200px] rounded-2xl cursor-pointer bg-gray-200'
             ></video>
           </Link>
 
